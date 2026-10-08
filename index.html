@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Akanksha Creations | Premium Boutique Store</title>
+  <meta name="description" content="Shop verified ethnic wear, western fashion, oxidized and gold-plated jewelry. Cash on delivery available across India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fcfaf8;
+      --card-bg: #ffffff;
+      --primary: #1f1e1d;
+      --accent: #a36130;
+      --accent-soft: #f4ece4;
+      --text: #2c2825;
+      --muted: #726c66;
+      --border: #ede4dc;
+      --green: #128c7e;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.5;
+      padding-bottom: 74px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      background: rgba(252, 250, 248, 0.98);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .header-btns {
+      display: flex;
+      gap: 8px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-call {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--primary);
+    }
+    .btn-wa {
+      background: var(--green);
+      color: #fff;
+    }
+    .hero {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 32px 20px 20px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      line-height: 1.2;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 580px;
+      margin: 0 auto 20px;
+    }
+    .features-row {
+      max-width: 1050px;
+      margin: 0 auto 30px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+    }
+    .feat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .feat-card span {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .feat-card small {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .section-desc {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 24px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .p-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+    }
+    .p-img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      background: #f0ebe4;
+    }
+    .p-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .p-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .p-desc {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .p-bottom {
+      border-top: 1px dashed var(--border);
+      padding-top: 12px;
+      margin-top: auto;
+    }
+    .p-pricing {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .price-final {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .price-old {
+      font-size: 0.9rem;
+      color: #a09a93;
+      text-decoration: line-through;
+    }
+    .btn-buy {
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    .btn-buy:hover {
+      background: var(--accent);
+    }
+    .about-section {
+      background: var(--accent-soft);
+      border-radius: 14px;
+      padding: 30px 24px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .about-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .about-section p {
+      color: #524b45;
+      font-size: 0.92rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      padding: 10px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;
+    }
+    .bottom-bar a {
+      flex: 1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="brand-name">The Akanksha Creations</div>
+    <div class="header-btns">
+      <a href="tel:+917479643701" class="btn btn-call">Call</a>
+      <a href="https://wa.me/917479643701?text=Hi%20The%20Akanksha%20Creations,%20I%20want%20to%20view%20your%20collection" class="btn btn-wa">WhatsApp</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <span class="badge">Cash on Delivery Available</span>
+    <h1>Curated Ethnic, Western & Designer Jewelry</h1>
+    <p>Handpicked boutique pieces dispatched with care straight to your doorstep across India.</p>
+  </section>
+
+  <section class="features-row">
+    <div class="feat-card">
+      <span>COD</span>
+      <small>Pan India Delivery</small>
+    </div>
+    <div class="feat-card">
+      <span>100%</span>
+      <small>Real Product Videos</small>
+    </div>
+    <div class="feat-card">
+      <span>Direct</span>
+      <small>WhatsApp Ordering</small>
+    </div>
+    <div class="feat-card">
+      <span>Safe</span>
+      <small>Checked Before Dispatch</small>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">Trending Catalog</h2>
+    <p class="section-desc">Tap "Order on WhatsApp" to verify size, request real videos, and book your parcel.</p>
+
+    <div class="product-grid">
+
+      <!-- Product 1: Purple Suit Set -->
+      <div class="p-card">
+        <img src="https://i.ibb.co/3WffK80/1000075207.jpg" alt="Premium Purple Heavy Embroidery Suit Set" class="p-img">
+        <span class="p-tag">Festive Ethnic Wear</span>
+        <div class="p-name">Heavy Embroidery Kurta Pant & Dupatta Set</div>
+        <div class="p-desc">Complete 3-Piece Set (Kurta, Pant & Dupatta) with fine thread & zari embroidery. Sizes: S, M, L, XL, XXL. Easy return & exchange available.</div>
+        <div class="p-bottom">
+          <div class="p-pricing">
+            <span class="price-final">Rs. 799</span>
+            <span class="price-old">Rs. 1,299</span>
+          </div>
+          <a href="https://wa.me/917479643701?text=Hi,%20I%20want%20to%20order:%20Heavy%20Embroidery%20Purple%20Kurta%20Pant%20Set%20(Rs.%20799)" class="btn btn-buy">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Product 2: Gold Necklace -->
+      <div class="p-card">
+        <img src="https://i.ibb.co/vzGsbjB/1000078842.jpg" alt="3-Layer Gold Plated Beaded Necklace" class="p-img">
+        <span class="p-tag">Gold Plated Jewelry</span>
+        <div class="p-name">3-Layer Gold Plated Beaded Necklace</div>
+        <div class="p-desc">High-Gold matte-gloss finish layered mala with delicate ruby red accents and intricate beads. Perfect for weddings and festive styling.</div>
+        <div class="p-bottom">
+          <div class="p-pricing">
+            <span class="price-final">Rs. 699</span>
+            <span class="price-old">Rs. 1,499</span>
+          </div>
+          <a href="https://wa.me/917479643701?text=Hi,%20I%20want%20to%20order:%203-Layer%20Gold%20Plated%20Beaded%20Necklace%20(Rs.%20699)" class="btn btn-buy">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Product 3: Cuff Jhumki -->
+      <div class="p-card">
+        <img src="https://i.ibb.co/68v8q2G/1000076605.jpg" alt="Cuff Jhumki Earring" class="p-img">
+        <span class="p-tag">Ear Cuff & Jhumka</span>
+        <div class="p-name">Cuff Jhumki (Peacock Kaanphool)</div>
+        <div class="p-desc">Full ear-wrap cuff with antique matte gold polish, sparkling stones, ruby-green accents, and hanging pearl drops for a royal look.</div>
+        <div class="p-bottom">
+          <div class="p-pricing">
+            <span class="price-final">Rs. 599</span>
+            <span class="price-old">Rs. 999</span>
+          </div>
+          <a href="https://wa.me/917479643701?text=Hi,%20I%20want%20to%20order:%20Cuff%20Jhumki%20(Rs.%20599)" class="btn btn-buy">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Product 4: 12 Pairs Oxidized Earrings -->
+      <div class="p-card">
+        <img src="https://i.ibb.co/v4Kx36C/1000079433.jpg" alt="12 Pairs Oxidized Earrings Collection" class="p-img">
+        <span class="p-tag">Oxidized Jewelry Combo</span>
+        <div class="p-name">12 Pairs Luxury Oxidized Earrings Set</div>
+        <div class="p-desc">12 unique designs (jhumke, chandbali, peacock studs) with a complimentary premium velvet box. Only Rs. 58 per pair!</div>
+        <div class="p-bottom">
+          <div class="p-pricing">
+            <span class="price-final">Rs. 699</span>
+            <span class="price-old">Rs. 1,299</span>
+          </div>
+          <a href="https://wa.me/917479643701?text=Hi,%20I%20want%20to%20order:%2012%20Pairs%20Oxidized%20Earrings%20Combo%20(Rs.%20699)" class="btn btn-buy">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Product 5: Denim Shirt -->
+      <div class="p-card">
+        <img src="https://i.ibb.co/1fWfN2N/1000075642.jpg" alt="Premium Faded Black Denim Shirt" class="p-img">
+        <span class="p-tag">Western Wear (Men's)</span>
+        <div class="p-name">Premium Faded Black Denim Shirt</div>
+        <div class="p-desc">Evergreen comfort-fit washed black denim shirt. Premium breathable material. Sizes: S, M, L, XL. Easy return policy.</div>
+        <div class="p-bottom">
+          <div class="p-pricing">
+            <span class="price-final">Rs. 1,349</span>
+            <span class="price-old">Rs. 1,999</span>
+          </div>
+          <a href="https://wa.me/917479643701?text=Hi,%20I%20want%20to%20order:%20Premium%20Faded%20Black%20Denim%20Shirt%20(Rs.%201,349)" class="btn btn-buy">Order on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Product 6: Perfume Set -->
+      <div class="p-card">
+        <img src="https://i.ibb.co/N6c52n9/perfume-set.png" alt="Bella Vita Luxury Perfume Set" class="p-img">
+        <span class="p-tag">Fragrance Gift Set</span>
+        <div class="p-name">Bella Vita Luxury Perfume Set (2x20 ML)</div>
+        <div class="p-desc">CEO Man + White Oud pocket luxury perfume combo. Long-lasting citrus, woody & spiced notes. Perfect for daily wear and gifting.</div>
+        <div class="p-bottom">
+          <div class="p-pricing">
+            <span class="price-final">Rs. 299</span>
+            <span class="price-old">Rs. 499</span>
+          </div>
+          <a href="https://wa.me/917479643701?text=Hi,%20I%20want%20to%20order:%20Bella%20Vita%20Luxury%20Perfume%20Set%20(Rs.%20299)" class="btn btn-buy">Order on WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+    <section class="about-section">
+      <h2>The Akanksha Creations</h2>
+      <p>Your one-stop destination for honest pricing and curated fashion. Every piece is handpicked and verified for finish before being securely dispatched across India.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>The Akanksha Creations</strong></p>
+    <p style="margin-top:4px;">Inquiries & Support: +91 7479643701</p>
+    <p style="margin-top:8px; font-size:0.75rem;">Built with ❤️ by 21coders</p>
+  </footer>
+
+  <div class="bottom-bar">
+    <a href="tel:+917479643701" class="btn btn-call">Call Direct</a>
+    <a href="https://wa.me/917479643701?text=Hi%20Akanksha,%20I%20want%20to%20place%20an%20order" class="btn btn-wa">WhatsApp Order</a>
+  </div>
+
+</body>
+</html>
